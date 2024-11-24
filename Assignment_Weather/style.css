@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+}
+
+body {
+    margin: auto 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("./Images/bodybg.png");
+}
+
+.header-class{
+    background-image: url("./Images/homebg.png");
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+.nav-container {
+    color: white;
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-list{
+    display: flex;
+}
+
+.nav-item{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.header-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-bottom-child1{
+    width: 50%;
+}
+
+.cloud1-image-container{
+    margin-top: 3.5rem;
+    margin-right: 3rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.cloud1-image{
+    height: 60%;
+}
+
+.header-bottom-heading{
+    color: white;
+    margin-left: 12rem;
+    margin-top: 8rem;
+}
+
+.header-bottom-button{
+    margin-left: 12rem;
+    margin-top: 1rem;
+}
+
+.download-button{
+    height: 2.5rem;
+    color: white;
+    background-color: rgba(247, 17, 13, 0.922);
+    border: 0px none;
+    border-radius: 4px;
+}
+
+.feature-button{
+    height: 2.5rem;
+    border: 0px none;
+    color: white;
+    background-color: rgba(41, 109, 246, 0.922);
+    border-radius: 4px;
+}
+
+.main-section{
+    background-image: url("./Images/bodybg.png");
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+.main-heading{
+    text-align: center;
+    margin: 6%;
+}
+
+.heading1{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: rgb(56, 107, 226);
+}
+
+.heading2{
+    padding: 4px;
+    font-size: large;
+    color: gray;
+}
+
+.effect-section{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.effect-container{
+    padding: 2px;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.effect-image{
+    width: 4rem;
+    height: 3rem;
+}
+
+.text-container1{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.text-container2{
+    color: grey;
+}
+
+.icon-container{
+    margin: 4px;
+}
+
+i {
+    color: orange;
+    font-size: 160px;
+}
+
+.weather-card-section{
+    margin-top: 4rem;
+}
+
+.weather-card-container{
+    margin-left: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.weather-card-container:hover{
+    
+}
+
+.weather-card1{
+    position: relative;
+    margin-right: -15%;
+}
+
+.weather-card2{
+    position: relative;
+    margin-left: -15%;
+}
+
+.weather-card3{
+    position: relative;
+    z-index: 2;
+}
+
+.drag1-image{
+    width: 70%;
+    margin-top: 30%;
+    height: 65%;
+}
+
+.drag2-image{
+    width: 85%;
+    height: 65%;
+    margin-top: 25%;
+}
+
+.screenshots-one{
+    display: flex;
+    justify-content: center;
+}
+
+.screenshots-one-container{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.cloudy-heading{
+    color: rgb(203, 190, 190);
+    transform: rotateZ(90deg);
+    font-size: 10rem;
+    font-weight: 300;
+    margin-left: -80%;
+    margin-top: -25%;
+}
+
+.screen01-image{
+    height: 75%;
+    z-index: 1;
+}
+
+.screenshots-text-container-main{
+    margin-left: -20%;
+}
+
+.screenshots-cloud-image{
+    padding-left: 16px
+}
+
+.screenshots-text-container{
+    margin-top: 10%;
+    width: 50%;
+}
+
+.screenshot-heading{
+    margin-top: 12px ;
+    padding: 16px;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.screenshot-description{
+    width: 65%;
+    padding: 16px;
+    font-size: large;
+    color: grey;
+}
+
+.screenshots-two-container{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+}
+
+.screen02-image{
+    height: 75%;
+    z-index: 1;
+}
+
+.sunny-heading{
+    color: rgb(203, 190, 190);
+    transform: rotateZ(90deg);
+    font-size: 10rem;
+    font-weight: 300;
+    margin-left: -78%;
+    margin-top: -25%;
+}
+
+.screenshots-text-container-two{
+    margin-top: 10%;
+    width: 50%;
+    margin-right: -50%;
+    display: inline;
+}
+
+.screen03-image{
+    height: 75%;
+    z-index: 1;
+}
+
+.rainy-heading{
+    color: rgb(203, 190, 190);
+    transform: rotateZ(90deg);
+    font-size: 10rem;
+    font-weight: 300;
+    margin-left: -75%;
+    margin-top: -25%;
+}
+
+.screenshots-three-container{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.review-container{
+    margin-left: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 4px;
+    width: 40%;
+}
+
+.reviews-desc{
+    font-weight: 500;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: larger;
+}
+
+.open-commas{
+    color: rgb(56, 107, 226);
+    padding-left: 8px;
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+.close-commas{
+    color: rgb(56, 107, 226);
+    font-weight: 800;
+    font-size: xx-large;
+    text-align: end;
+    padding-right: 36px;
+}
+
+.commentor{
+    padding: 6px;
+    font-size: small;
+}
+
+.footer-container{
+    padding-top: 2rem;
+    color: gainsboro;
+    height: 10rem;
+    background-color: rgb(62, 92, 161);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-image{
+    margin-top: -4%;
+}
+
+.footer-line-image{
+    width: 75%;
+    margin-left: 9.5rem;
+}
+
+
+.footer-text{
+    color: white;
+    text-align: center;
+    margin-top: -3%;
+}
+
+
+
+.leftItem{
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+
+
+
+.rightItem {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttom-section {
+    background-image: url("./Images/downloadbg.png");
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-div {
+    margin-top: 20px;
+}
+
+
+.footer-bg{
+    width: 60%;
+    /* margin-bottom: -20%; */
+}
+
+.leftItem-heading1{
+    margin-top: 10%;
+    font-size: xx-large;
+}
+
+.leftItem-child{
+    margin-left: 8rem;
+    margin-top: 5rem;
+}
+
+.leftItem-heading2{
+    padding: 8px;
+}
