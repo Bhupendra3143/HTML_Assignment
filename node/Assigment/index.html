@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Metacube Parking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- <h1 style="color: white; 
+               text-align: center;">
+        Welcome to Metacube Parking
+    </h1> -->
+
+    <nav>  
+        <ul>
+            <li>
+                <a href="#form1">
+                    <div class = "nav-div">
+                           
+                        Add Employee   
+                    </div>
+                </a>
+            </li>
+            <li>  
+                <a href="#form2">
+                    <div class = "nav-div">   
+                        Add Vehicle   
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#form3">
+                    <div class = "nav-div">   
+                        Give feedback   
+                    </div>
+                </a>
+
+            </li>
+            <li>
+                <a href="#pricing">
+                    <div class = "nav-div">   
+                        Pricing  
+                    </div>
+                </a>
+            <li>
+        </ul>     
+    </nav> 
+    <!-- <button type="button" class="collapsible">Open Collapsible</button>
+    <div class="content">
+        <p>Lorem ipsum...</p>
+    </div> -->
+        <img src = "Green_Sport_Car_Black_Wallpaper.jpg" class = "image_car">
+        <div class = "header"><a href="#form1"><h2>Add Employee Here</h2></a> </div>
+          
+        <form class = "form">
+            <table>
+                <tr class = "field active" id = "nameField">
+                    <td><label for="name",>Full Name</label></td>
+                    <td><span><input type="text" id="name" ></span></td>
+                    <td><button type="button" class="btn" onclick="nextStep('genderField', 'name')">Next</button></td>
+                </tr>
+                <tr class = "field" id = "genderField">
+                    <td><label>Hi <span id="nameDisplay"></span>! Can I know your gender?</label></td>
+                    <td>
+                        <select id="gender" name="gender" required>  
+                            <option value="male">Male</option>  
+                            <option value="female">Female</option>  
+                            <option value="other">Other</option>  
+                        </select>  
+                    </td>
+                <td><button type="button" class="btn" onclick="nextStep('emailField', 'gender')">Next</button></td>
+                </tr>
+                <tr class = "field" id = "emailField">
+                    <td><label for="email",>Email</label></td>
+                    <td><input type="email" id="email" ></td>
+                    <td><button type="button" class="btn" onclick="nextStep('passwordField', 'email')">Next</button></td>
+                </tr>
+                <tr class = "field" id = "passwordField">
+                    <td><label for="password",>Password</label></td>
+                    <td><input type="password" id="password" placeholder="Password" required
+                        onchange="checkPasswordStrength()"></td>
+                    <div class="password-strength" id="passwordStrength"></div>
+                    <td><button type="button" class="btn" onclick="nextStep('confirmField', 'password')">Next</button></td>
+                </tr>
+                <tr class = "field" id = "confirmField">
+                    <td><label for="confirmpass",>confirm Password</label></td>
+                    <td><input type="password" id="confirmpass" ></td>
+                    <td><button type="button" class="btn" onclick="nextStep('contactField', 'confirmpass')">Next</button></td> 
+                </tr>
+                <tr class = "field" id = "contactField">
+                    <td><label for="contact",>Contact Number</label></td>
+                    <td><input type="number" id="contact" ></td>
+                    <td><button type="button" class="btn" onclick="showInfo(event)">Next</button></td>
+                </tr>
+                </li>
+            </table>
+        <br>
+            <input type="submit" value="Add Employee">
+        </form>
+
+        <div class = "header"></div><a href="#form2"><h2>Add Vehicle Here</h2></a></div>
+        <form id = "form2", class = "form_content", action="#" method="post">
+            <table>
+                <tr>
+                    <td><label for="vehicle">Vehicle Make</label></td>
+                    <td><span><input type="text" id="vehicle" ></span></td>
+                </tr>
+                <tr>
+                    <td><label for="model">Vehicle Model</label></td>
+                    <td>
+                        <input type="text" id="model" >
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="type"><b>Type</b></label> </td>
+                    <td>
+                        <select id="type" name="type" required>  
+                            <option value="bike">Bike</option>  
+                            <option value="car">Car</option> 
+                        </select>  
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="number">Vehicle Number</label></td>
+                    <td><input type="text" id="number" ></td>
+                </tr>
+                <tr>
+                    <td> <label for="empId">Employee Id</label></label></td>
+                    <td><input type="text" id="empId" ></td>
+                </tr>
+                <tr>
+                    <td><label for="identification">Identification</label></td>
+                    <td><input  type="text" id="identification" ></td>
+                </tr>
+                </li>
+            </table>
+            <input type="submit" value="Add Vehicle">
+        </form>
+
+        <div class = "header"></div><a href="#form3"><h2>Get In Touch</h2></a></div>
+        <form id = "form3", class = "form_content">
+            <table>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td><input type="text" name="name" id="full-name" value=""/></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td>
+                        <input type="email" name="email" value=""/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="subject">Subject</label></td>
+                    <td>
+                        <input type="text" name="Subject" id="subject" value=""/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <lable>Message</lable></td>
+                    <td><textarea></textarea></td>
+                </tr>
+            </table>
+        </form>
+
+
+        <div class = "header"></div><a href="#pricing"><h2>Pricing</h2></a></div>
+        <ul id = "pricing", class = "form_content">
+            <li>
+                <h3>Cycle</h3>
+                <h4>$100/Month</h4>
+                <p>$5 Daily</p>
+                <p>$100 Monthly</p>
+                <p>$500 yearly</p>
+                <button>Purchase</button>
+            </li>
+            <li>
+                <h3>MotorCycle</h3>
+                <h4>$200/Month</h4>
+                <p>$10 Daily</p>
+                <p>$200 Monthly</p>
+                <p>$1000 yearly</p>
+                <button>Purchase</button>
+            </li>
+            <li>
+                <h3>Four Wheelers</h3>
+                <h4>$500/Month</h4>
+                <p>$20 Daily</p>
+                <p>$500 Monthly</p>
+                <p>$3500 yearly</p>
+                <button>Purchase</button>
+            </li>
+        </ul>
+        
+    <script src="./script.js"></script>
+</body>
+
+</html>
