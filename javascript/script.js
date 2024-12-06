@@ -1,3 +1,7 @@
+function scrollToAnchor(target) {
+    document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+}
+
 // Next Button Function to do validation in Employee Section
 function nextStep(nextFieldId, inputId) {
     const currentField = document.querySelector('.field.active');
@@ -134,6 +138,7 @@ window.addEventListener('click', (event) => {
         modal.style.display = 'none';
     }
 });
+
 
 
 // Function to calculate the amount based on selected currency and vehicle type

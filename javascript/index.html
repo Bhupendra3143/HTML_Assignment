@@ -16,22 +16,21 @@
     <nav>  
         <ul>
             <li>
-                <a href="#form1">
+                <a href="#form1" onclick="scrollToAnchor('target_page')">
                     <div class = "nav-div">
-                           
                         Add Employee   
                     </div>
                 </a>
             </li>
             <li>  
-                <a href="#form2">
+                <a href="#form2" onclick="scrollToAnchor('target_page')">
                     <div class = "nav-div">   
                         Add Vehicle   
                     </div>
                 </a>
             </li>
             <li>
-                <a href="#form3">
+                <a href="#form3" onclick="scrollToAnchor('target_page')">
                     <div class = "nav-div">   
                         Give feedback   
                     </div>
@@ -39,7 +38,7 @@
 
             </li>
             <li>
-                <a href="#pricing">
+                <a href="#pricing" onclick="scrollToAnchor('target_page')">
                     <div class = "nav-div">   
                         Pricing  
                     </div>
@@ -51,10 +50,10 @@
     <div class="content">
         <p>Lorem ipsum...</p>
     </div> -->
-        <img src = "Green_Sport_Car_Black_Wallpaper.jpg" class = "image_car">
-        <div class = "header"><a href="#form1"><h2>Add Employee Here</h2></a> </div>
-          
-        <form class = "form">
+    <img src = "Green_Sport_Car_Black_Wallpaper.jpg" class = "image_car">
+    <div id = "target_page">
+        <div class = "header"><a href="#form1"><h2>Add Employee Here</h2></a> </div>      
+        <form id = "form1", class = "form_content", action="#" method="post">
             <table>
                 <tr class = "field active" id = "nameField">
                     <td><label for="name",>Full Name</label></td>
@@ -92,107 +91,138 @@
                 <tr class = "field" id = "contactField">
                     <td><label for="contact",>Contact Number</label></td>
                     <td><input type="number" id="contact" ></td>
-                    <td><button type="button" class="btn" onclick="showInfo(event)">Next</button></td>
+                    <td><button type="button" class="btn" onclick="showInfo(event)">Submit</button></td>
                 </tr>
-                </li>
             </table>
         <br>
-            <input type="submit" value="Add Employee">
         </form>
 
         <div class = "header"></div><a href="#form2"><h2>Add Vehicle Here</h2></a></div>
         <form id = "form2", class = "form_content", action="#" method="post">
             <table>
-                <tr>
-                    <td><label for="vehicle">Vehicle Make</label></td>
-                    <td><span><input type="text" id="vehicle" ></span></td>
-                </tr>
-                <tr>
-                    <td><label for="model">Vehicle Model</label></td>
-                    <td>
-                        <input type="text" id="model" >
+                <tr class = "field active" id = "vehicleNameField">
+                    <td><label for="vehicleName",>Enter Vehicle Name: </label></td>
+                    <td><span><input type="text" id="vehicleName" placeholder="Vehicle Name" required onchange="addcolour()"></span></td>
+                    <td><button type="button" class="btn"
+                        onclick="nextStep1('vehicleModelField', 'vehicleNameField')">Next</button>
                     </td>
                 </tr>
-                <tr>
-                    <td><label for="type"><b>Type</b></label> </td>
+                <tr class = "field" id = "vehicleModelField">
+                    <td><label for="vehicleModel">Enter vehicle model:</label></td>
                     <td>
-                        <select id="type" name="type" required>  
-                            <option value="bike">Bike</option>  
-                            <option value="car">Car</option> 
-                        </select>  
+                        <input type="text" id="vehicleModel" placeholder="Vehicle Model" required onchange="addcolour()">
                     </td>
+                <td><button type="button" class="btn"
+                    onclick="nextStep1('vehicleNumberField', 'vehicleModelField')">Next</button></td>
                 </tr>
-                <tr>
-                    <td><label for="number">Vehicle Number</label></td>
-                    <td><input type="text" id="number" ></td>
+                <tr class = "field" id = "vehicleNumberField">
+                    <td><label>Enter vehicle number:</label></td>
+                    <td><input type="text" id="vehicleNumber" placeholder="Vehicle Number" required onchange="addcolour()"></td>
+                    <td><button type="button" class="btn"
+                        onclick="nextStep1('emplyeeIdField', 'vehicleNumberField')">Next</button></td>
                 </tr>
-                <tr>
-                    <td> <label for="empId">Employee Id</label></label></td>
-                    <td><input type="text" id="empId" ></td>
+                <tr class = "field" id = "emplyeeIdField">
+                    <td><label>Enter employee ID:</label></td>
+                    <td><input type="number" id="emplyeeId" placeholder="Employee ID" required onchange="addcolour()"></td>
+                    <td><button type="button" class="btn"
+                        onclick="nextStep1('vehicleTypeField', 'emplyeeIdField')">Next</button></td>
                 </tr>
-                <tr>
-                    <td><label for="identification">Identification</label></td>
-                    <td><input  type="text" id="identification" ></td>
+                <tr class = "field" id = "vehicleTypeField">
+                    <td><label>Which type of vehicle do you have?</label></td>
+                    <td><select id="vehicleType" required>
+                        <option value="">Select Vehicle Type</option>
+                        <option value="Cycle">Cycle</option>
+                        <option value="MotorCycle">MotorCycle</option>
+                        <option value="FourWheeler">Four Wheeler</option>
+                    </select></td>
+                    <td><button type="submit" class="btn" onclick="showVehicleInfo(event)">Submit</button></td> 
                 </tr>
-                </li>
             </table>
             <input type="submit" value="Add Vehicle">
         </form>
 
         <div class = "header"></div><a href="#form3"><h2>Get In Touch</h2></a></div>
-        <form id = "form3", class = "form_content">
-            <table>
-                <tr>
-                    <td><label for="name">Name</label></td>
-                    <td><input type="text" name="name" id="full-name" value=""/></td>
-                </tr>
-                <tr>
-                    <td><label for="email">Email</label></td>
-                    <td>
-                        <input type="email" name="email" value=""/>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="subject">Subject</label></td>
-                    <td>
-                        <input type="text" name="Subject" id="subject" value=""/>
-                    </td>
-                </tr>
-                <tr>
-                    <td> <lable>Message</lable></td>
-                    <td><textarea></textarea></td>
-                </tr>
-            </table>
-        </form>
+            <form class="form_content" id = "form3">
+                <table>
+                    <tr><input class="feedback-input" type="text" name="applicant-name" id="applicant-name" value=""
+                        placeholder="Name" /></tr>
+                    <br><br>
+                    <tr><input class="feedback-input" type="email" name="applicant-email" id="applicant-email" value=""
+                        placeholder="Email" /></tr>
+                    <br><br>
+                    <tr><input class="feedback-input" type="text" name="subject" id="subject" value=""
+                        placeholder="Subject" /></tr>
+                    <br><br>
+                    <tr><textarea class="feedback-message" placeholder="Message"></textarea></tr>
+                    <br><br>
+                    <tr><div class="feedback-btn-container">
+                        <button class="feedback-btn">Submit</button>
+                    </div></tr>
+                </table>
+            </form>
+        </div>
 
 
         <div class = "header"></div><a href="#pricing"><h2>Pricing</h2></a></div>
-        <ul id = "pricing", class = "form_content">
-            <li>
-                <h3>Cycle</h3>
-                <h4>$100/Month</h4>
-                <p>$5 Daily</p>
-                <p>$100 Monthly</p>
-                <p>$500 yearly</p>
-                <button>Purchase</button>
-            </li>
-            <li>
-                <h3>MotorCycle</h3>
-                <h4>$200/Month</h4>
-                <p>$10 Daily</p>
-                <p>$200 Monthly</p>
-                <p>$1000 yearly</p>
-                <button>Purchase</button>
-            </li>
-            <li>
-                <h3>Four Wheelers</h3>
-                <h4>$500/Month</h4>
-                <p>$20 Daily</p>
-                <p>$500 Monthly</p>
-                <p>$3500 yearly</p>
-                <button>Purchase</button>
-            </li>
-        </ul>
+        <div class="form_content" id = "pricing">
+            <div id="currencyModal" class="modal">
+                <div class="modal-content">
+                    <form>
+                        <span id="closeModalBtn" class="close-btn">&times;</span>
+                        <h3>Select Currency</h3>
+                        <select id="currencySelect" class="currency-select">
+                            <option value="">Select Currency</option>
+                            <option value="USD">USD - United States Dollar</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="YEN">YEN - Japanese Yen</option>
+                        </select>
+                        <h3>Select Vehicle</h3>
+                        <select id="vehiclePriceSelect" class="vehiclePrice-select">
+                            <option value="">Select Vehicle</option>
+                            <option value="Cycle">Cycle</option>
+                            <option value="MotorCycle">MotorCycle</option>
+                            <option value="FourWheeler">Four Wheeler</option>
+                        </select>
+                        <button id="getPassBtn" class="btn" onclick="calculateAmount(event)">Get Pass</button>
+                    </form>
+                </div>
+            </div>
+            <div class = "prices-vehicles">
+                <div class="pricing-sub-section">
+                    <h3 class="pricing-heading1">Cycle</h3>
+                    <div class="monthly-pricing">
+                        <h4 class="pricing-heading2">$100/Month</h4>
+                    </div>
+                    <p class="pricing-paragraph">$5 Daily</p>
+                    <p class="pricing-paragraph">$100 Monthly</p>
+                    <p class="pricing-paragraph">$500 yearly</p>
+    
+                    <button id="openModalBtn" class="purchase-btn">Purchase Now</button>
+                </div>
+    
+                <div class="pricing-sub-section">
+                    <h3 class="pricing-heading1">MotorCycle</h3>
+                    <div class="monthly-pricing">
+                        <h4 class="pricing-heading2">$200/Month</h4>
+                    </div>
+                    <p class="pricing-paragraph">$10 Daily</p>
+                    <p class="pricing-paragraph">$200 Monthly</p>
+                    <p class="pricing-paragraph">$1000 yearly</p>
+                    <button id="openModalBtn" class="purchase-btn">Purchase Now</button>
+                </div>
+    
+                <div class="pricing-sub-section">
+                    <h3 class="pricing-heading1">Four Wheelers</h3>
+                    <div class="monthly-pricing">
+                        <h4 class="pricing-heading2">$500/Month</h4>
+                    </div>
+                    <p class="pricing-paragraph">$20 Daily</p>
+                    <p class="pricing-paragraph">$500 Monthly</p>
+                    <p class="pricing-paragraph">$3500 yearly</p>
+                    <button id="openModalBtn" class="purchase-btn">Purchase Now</button>
+                </div>
+            </div>
+        </div>
         
     <script src="./script.js"></script>
 </body>

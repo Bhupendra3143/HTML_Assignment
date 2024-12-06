@@ -3,6 +3,11 @@ body{
     margin:0px;
 }
 
+.target_page{
+    display: flex;
+    justify-items: center;
+}
+
 .image_car{
     width: 1260px;
 }
@@ -65,9 +70,9 @@ table{
     display:contents;
 }
 
-/* .form_content:not(:target) {
+.form_content:not(:target) {
     display: none;
-} */
+}
 
 h3{
     font-family: 'Courier New';
@@ -93,4 +98,9 @@ input:focus {
     height: 5px;
     margin-top: 5px;
     border-radius: 2px;
+}
+.prices-vehicles{
+    display : flex;
+    justify-content: space-evenly;
+
 }
