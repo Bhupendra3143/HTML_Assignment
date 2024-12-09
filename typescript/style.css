@@ -1,0 +1,106 @@
+body{
+    background-color: rgb(28, 31, 11);
+    margin:0px;
+}
+
+.target_page{
+    display: flex;
+    justify-items: center;
+}
+
+.image_car{
+    width: 1260px;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    max-width:inherit;
+    background-color: #333;
+    
+}
+nav ul{
+    list-style-type: none;
+    height:100%;
+    width:100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding:0px;
+    margin:0;
+    text-align:center;
+}
+.nav-div{
+    font-size: larger;
+    height: 40px;
+}
+
+.nav-div:hover{
+    background-color: black;
+    transition-duration: 1.5s;
+    color: greenyellow;
+}
+
+nav a {
+    font-size: small;
+    font-family: cartograph cf;
+    font-style: italic;
+    color: rgb(220, 245, 182);
+    text-decoration: none;
+}
+
+
+h2{
+    font-family: 'Courier New';
+    color: rgb(220, 245, 182);
+}
+
+table{
+    width: 1000px;
+}
+
+
+
+.form_content {
+    color: greenyellow;
+    transition-property: none;
+    -o-transition-duration: 3s;
+    transition-duration: 5s;
+    display:contents;
+}
+
+.form_content:not(:target) {
+    display: none;
+}
+
+h3{
+    font-family: 'Courier New';
+    color: rgb(220, 245, 182);
+    font-style: italic;
+}
+
+.field {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.field.active {
+    display: block;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+.password-strength {
+    height: 5px;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+.prices-vehicles{
+    display : flex;
+    justify-content: space-evenly;
+
+}
