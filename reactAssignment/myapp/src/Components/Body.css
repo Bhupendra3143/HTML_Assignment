@@ -1,0 +1,23 @@
+.container {
+    margin: 2rem;
+    padding: 20px;
+}
+
+.task-container {
+    text-align: center;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-types {
+    width: 100%;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    max-height: 420px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
